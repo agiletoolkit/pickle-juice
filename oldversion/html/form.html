@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Form Page for Trying Out Cucumber</title>
+<script type="text/javascript">
+function doConfirmBox() {
+     var a =confirm('Confirm');
+     if (a == true)
+         document.all.confirmtext.value = "OK"
+     else
+         document.all.confirmtext.value = "Cancel";
+}
+
+function doPromptBox() {
+     var a =prompt('Enter Text' , '');
+     if (a == null)
+         document.all.prompttext.value = "Cancel"
+     else
+         document.all.prompttext.value = a;
+}
+</script>
+<style type="text/css">
+	*{margin:0;padding:0}
+	* a,* a em{color:#06C;text-decoration:none}
+	* a:hover,a:active{text-decoration:underline}
+	body{color:#333;font:normal 73.2%/140% Arial,Helvetica,sans-serif}
+	h1,h2,h3,h4,h5,h6,table{margin-bottom:15px}
+	h1{font-size:225%}
+	h1.pageHeading{border-bottom:3px double #333;padding:10px;text-align:center}
+	h2{font-size:200%}
+	h3{font-size:175%}
+	form{background:#e3e3e3;margin-bottom:5px;padding:10px 10px 5px}
+	form p{margin-bottom:15px}
+	form table{width:100%}
+	select,textarea{padding:2px}
+	table td{padding:2px 4px}
+	td{vertical-align:top}
+	td.c1{width:35%}
+	textarea{height:90px;width:90%}
+	#container{background:#f3f3f3;margin:5px auto 10px;padding:10px;width:780px}
+</style>
+</head>
+<body id="bodyId" title="Form Page">
+<div id="container">
+<h1 class="pageHeading">Cucumber Test Page with Form</h1>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<div id="internalDiv">Internal DIV</div>
+<form id="formId" name="formName" action="">
+<h1>Sample Form</h1>
+<table cellspacing="0" summary="sample form table">
+<tr>
+	<td class="c1">Link To load Open Page:</td><td class="c2"><a name="linkName" id="linkId" title="linkTitle" class="linkClass" href="./open.html">Click Here</a></td>
+</tr>
+<tr>
+	<td>Link To load Open Page in New Window:</td><td> <a href="./open.html" target="_blank">New Window</a></td>
+</tr>
+<tr>
+	<td>Link To load Open Page in New Window:</td><td> <a href="./open2.html" target="_blank">Second Popup Window</a></td>
+</tr>
+<tr>
+	<td>Textbox:</td><td> <input name="textboxName" id="textboxId" type="text" value=""/></td>
+</tr>
+</tr>
+<tr>
+	<td>TextArea:</td><td><textarea name="textAreaName" id="textAreaId"></textarea></td>
+</tr>
+<tr>
+	<td>Hidden:</td><td> <input name="hiddenName" id="hiddenId" type="hidden" value="not visible"/></td>
+</tr>
+<tr>
+	<td>Checkbox:</td><td>  <input name="checkboxName" id="checkboxId" type="checkbox"/></td>
+</tr>
+<tr>
+	<td>Radio:</td><td>  <input name="radioName" id="radio1" type="radio" value="One"/>One<input name="radioName" id="radio2" type="radio" value="Two"/>Two</td>
+</tr>
+<tr>
+	<td>Select:</td><td> <select name="selectName" id="selectId">
+		<option value="default"></option>
+		<option value="">Empty Option</option>
+		<option value="option1">First Option</option>
+		<option value="option2">Second Option</option></select></td>
+</tr>
+<tr>
+	<td>Number Select:</td><td>  <select id="numberSelectId" name="numberSelectName" size="1">
+	<option value="00" selected="selected"></option>
+	<option value="05">five</option>
+	<option value="10" >ten</option>
+	<option value="15">fifteen</option>
+	<option value="20">20</option>
+	<option value="25">25</option>
+	<option value="30">30</option>
+	<option value="35">35</option>
+	<option value="40">40</option>
+	<option value="45">45</option>
+	<option value="50">50</option>
+	<option value="55">55</option></select>
+	</td>
+</tr>
+<tr>
+<td>Multiple Select:</td><td><select id="multiSelectId" name="multiSelectName" multiple="true" size="5">
+	<option value="1">AdminTest Andy</option>
+	<option value="2">Bob Payne</option>	
+	<option value="3">Club Sunshine</option>	
+	<option value="4">Bob Martin</option>	
+</select>
+</td>
+</tr>
+<tr>
+	<td>Span:</td><td><span id="spanId" >Span Contents</span>  </td>
+</tr>
+<tr>
+	<td>Button:</td><td><input type="button" name ="buttonName" id ="buttonId" value ="Go" onclick="javascript:document.location='open.html';" title = "this is button1"></td>
+</tr>
+<tr>
+	<td>Alert Popup:</td><td><input type = button value = "Alert" onclick = "javascript:alert('This is an alert box');"></td>
+</tr>
+<tr>
+	<td>Confirm:</td><td><input type = "text" name = "confirmtext"><input type = button value = "Confirm" onclick= "javascript:doConfirmBox();"></td>
+</tr>
+<tr>
+	<td>FileUpload:</td><td><input type="file" name="upload"></td>
+</tr>
+</table>
+</form>
+<table id="tableId" cellspacing="0" border="1" summary="sample table">
+<th colspan="2">Test Table</th>
+<tr><td>R1 C1</td><td>R1 C2</td></tr>
+<tr><td>R2 C1</td><td></td></tr>
+<tr><td>R3 C1</td><td>R3 C2</td></tr>
+</table>
+</div>
+<div>
+	<p>First Paragraph</p>
+	<p>Second paragraph</p>
+</div>
+</body>
+</html>

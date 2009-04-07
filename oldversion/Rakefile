@@ -1,0 +1,16 @@
+$:.unshift(File.dirname(__FILE__) + '/../../lib')
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new(:features) do |t|
+   scenario = ENV["TEST_SCENARIO"]
+   
+   scenario_opt =  "" 
+   unless scenario.nil? or scenario == ""
+     scenario_opt =' --scenario "' + scenario + '"' 
+   end  
+   
+   t.cucumber_opts = "--format html --out results/result.html --format pretty --no-color" + scenario_opt
+end
+
+task :features 
+
